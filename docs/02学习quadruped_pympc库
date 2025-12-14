@@ -1,0 +1,39 @@
+## README.md：为了学习动力学和mpc相关东西，了解整体框架，以及找到能够直接复用的成果、
+
+## todo.md：
+	1周 MPC基础：
+1.学习离散时间系统模型（状态空间模型 State-space）
+2.学习线性/非线性 MPC 原理（LQR、NMPC 基础）
+3.熟悉机器人动力学模型（质心模型、落足点、四足/双足简化模型）
+4.安装 CasADi（符号优化求解器）
+5.构建系统动力学方程（离散化）
+  2周 MPC 控制器搭建：
+1.目标函数设计（tracking cost、smoothness cost）
+2.约束建模（输入约束、接触力约束、关节限制）
+3.使用 CasADi + IPOPT 构建 NMPC 求解器
+4.基础 MPC 循环（predict → optimize → control）
+5.实现最小可运行 MPC demo（无噪声）
+  3周 MPC 实时化与机器人接口：
+1.实现 50–200 Hz 控制循环（定时器、缓存）
+2.状态估计接口（IMU、足端力、里程计 State Estimation）
+3.MPC Warm start 技术（前一周期解的初始化）
+4.Latency compensation（延迟补偿）
+5.输出参考指令（速度、落点位置、接触序列）
+  4周 MPC 与底层控制集成：
+1.MPC 输出映射至电机控制接口（期望关节角/速度/力）
+2.与低层 1kHz 控制器对接（PD/FOC）
+3.故障保护（QP fail-safe、Fallback PD 控制）
+4.实机模拟证（IsaacGym/IsaacLab 中运行）
+5.完成可运行的高频 MPC 控制模块
+
+
+##doc.md：决策
+1 决定采用单刚体SRC作为系统动力学方程，centroidal_model_nominal.py，acados四阶rk进行离散
+
+##log.md：记录旅程
+## 2025-01-15 
+完成：1阶段所有
+
+进行中：
+
+踩坑及解决：
