@@ -43,3 +43,27 @@ The goal of this project is not only to make MPC work, but to make it
 
 ## Repository Structure (Planned)
 
+.
+├─ docs/ # Blog-style documentation and derivations
+├─ src/ # MPC, dynamics, estimation, interfaces
+├─ configs/ # Controller and experiment configurations
+├─ scripts/ # Demo and visualization scripts
+├─ experiments/ # Logs and results
+└─ tests/ # Unit tests
+
+
+---
+
+## Status
+
+🚧 This repository is under active development.  
+Each completed module will be accompanied by:
+- runnable code
+- quantitative evaluation
+- visual results (plots / videos)
+
+---
+
+## License
+MIT License
+
