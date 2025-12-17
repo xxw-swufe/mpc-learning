@@ -5,6 +5,9 @@
 
 
 ##doc.md：决策
+  将MPC接入isaac lab：   A: 首先参考源代码，写出三个基本的，启动，环境，模型，至少能跑通
+            B:注意足端映射不要错了，足端状态输入是位置还是速度，打印body_name joint_name
+
 
 
 
@@ -15,9 +18,19 @@
 
 ##log.md：记录旅程
 ###### 2025-12-15
-完成：
+完成：编写了目录结构，和基础的三个代码stand_go2.py 负责“启动 App + 主循环” → 
+StandEnv 负责“搭建仿真世界 + 管理 step/reset/obs/action” → 
+Go2.py负责“把 Go2 的 Articulation 封装成好用的接口 + 提供 Go2 的配置(usd/关节初值/执行器)”
 
-进行中：
+进行中：运行代码  python go2_control_lab/scripts/stand_go2_diffik.
+py --device cuda --alpha 0.1 --dls-lambda 0.08 --dq-max 0.06
+python go2_control_lab/scripts/stand_go2.py
+
 
 踩坑及解决：
+站立预期是0.4,但是现在是0.3左右---------------原版修改q_desired[0] (position target) 
+每条腿的预期位置实现
+
+diffik版本一直站不起来--------------A：地面默认0,最好根据feet_pos_w来算，然后固定一个高度
+
 
