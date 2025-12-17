@@ -1,1 +1,28 @@
 
+##doc.md：决策
+1 决定采用单刚体SRC作为系统动力学方程，centroidal_model_nominal.py，acados四阶rk进行离散
+2 第二周的任务 
+2.1 centroidal_nmpc_nominal.py：基础版本（更容易跑通）直接用原版不修改
+centroidal_nmpc_input_rates.py：加了输入变化率相关的结构（更平滑、但更复杂）
+2.2 尽量采用原版
+2.2决定config.py为定义约束世界，和机器人背景，具体约束建模文件根据：
+摩擦锥约束实现，约束集成方式：centroidal_nmpc_nominal.py
+接触动力学处理：centroidal_model_nominal.py
+JAX采样版本的处理方式：centroidal_nmpc_jax.py
+配置参数：config.py
+2.3 CasADi + IPOPT 
+
+
+
+
+
+
+
+##log.md：记录旅程
+###### 2025-12-15
+完成：
+
+进行中：
+
+踩坑及解决：
+
