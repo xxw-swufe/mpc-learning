@@ -25,6 +25,8 @@ Go2.py负责“把 Go2 的 Articulation 封装成好用的接口 + 提供 Go2 �
 进行中：运行代码  python go2_control_lab/scripts/stand_go2_diffik.
 py --device cuda --alpha 0.1 --dls-lambda 0.08 --dq-max 0.06
 python go2_control_lab/scripts/stand_go2.py
+  
+diffik版本一直站不起来    ############后续在解决，先不管这个版本了
 
 
 踩坑及解决：
