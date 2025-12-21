@@ -17,7 +17,7 @@
 
 
 ##log.md：记录旅程
-###### 2025-12-15
+###### 2025-12-18
 完成：编写了目录结构，和基础的三个代码stand_go2.py 负责“启动 App + 主循环” → 
 StandEnv 负责“搭建仿真世界 + 管理 step/reset/obs/action” → 
 Go2.py负责“把 Go2 的 Articulation 封装成好用的接口 + 提供 Go2 的配置(usd/关节初值/执行器)”
