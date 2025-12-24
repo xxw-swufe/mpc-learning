@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "go2-control-lab"
+version = "0.1.0"
+description = "Go2 robot control laboratory with MPC and differential IK"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "BSD-3-Clause"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+keywords = ["robotics", "quadruped", "mpc", "isaac-lab", "unitree"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "torch>=1.13.0",
+    "numpy>=1.21.0",
+    "scipy>=1.7.0",
+    "matplotlib>=3.5.0",
+    "casadi",  # For MPC optimization
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black",
+    "isort",
+    "flake8",
+    "mypy",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/go2_control_lab"
+Repository = "https://github.com/yourusername/go2_control_lab.git"
+Issues = "https://github.com/yourusername/go2_control_lab/issues"
+
+[project.scripts]
+stand-go2 = "go2_control_lab.scripts.stand_go2:main"
+debug-fk-ik = "go2_control_lab.scripts.debug_fk_ik:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["go2_control_lab*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 100
